@@ -10,6 +10,9 @@ export CyclicReductionWs, cyclic_reduction!, cyclic_reduction_check
 include("GeneralizedSchurDecompositionSolver.jl")
 export GsSolverWs, gs_solver!
 
-
+import SnoopPrecompile
+SnoopPrecompile.@precompile_all_calls begin
+  include("../test/runtests.jl")
+end
 
 end # module
